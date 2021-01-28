@@ -13,7 +13,34 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        // Available options and their defaults:
+        base64Width: 20,
+        forceBase64Format: `png`, // valid formats: png,jpg,webp
+        stripMetadata: true,
+        defaultQuality: 100,
+        background: "#E96E1F",
+      },
+    },
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Manrope\:400,600,800`],
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
