@@ -19,7 +19,6 @@ const HeroSectionWrapper = styled.section`
     height: 120rem;
     border-radius: 100%;
     background-color: var(--yellowish);
-    bottom: -100rem; 
     position: absolute;
     display: flex;
     justify-content: center;
@@ -33,20 +32,29 @@ const HeroSectionWrapper = styled.section`
 
 const HeroSection = ({heroMockup}) => {
   return (
-    <HeroSectionWrapper>
-      <Container className="flex flex-col p-7 pt-10 z-10 items-center pb-11 2xl:pt-11">
+    <HeroSectionWrapper id='home'>
+      <Container className="flex flex-col z-10 items-center pt-8 xs:pt-9 pb-11 2xl:pt-11 pl-3 pr-3 lg:pl-7 lg:pr-7 xl:pl-0 xl:pr-0">
         <div className="flex flex-col items-center mt-2 2xl:mt-8">
-          <h1 className="mb-5 text-center text-2xl max-w-6xl 2xl:text-4xl 2xl:max-w-none">Hämta, skapa och dela dina recept direkt från din mobil.</h1>
-          <Button >Se video</Button>
+          <h1 className="mb-4 lg:text-center text-xl lg:text-2xl max-w-6xl xl:text-3xl xl:max-w-screen-lg 2xl:text-4xl 2xl:max-w-none">
+            Hämta, skapa och dela dina recept direkt från din mobil.
+          </h1>
+          <Button className="pl-4 pr-4 pt-2 pb-2 lg:pl-5 lg:pr-5 lg:pt-3 lg:pb-3 w-full lg:w-auto">
+            Ladda hem app
+          </Button>
         </div>
       </Container>
-      <div className='circle'>
-          <GatsbyImage
-          style={{ width:'280px', height: '560px', objectFit: "contain", top: '-100px' }}
+      <div className="circle -bottom-22 xs:-bottom-21">
+        <GatsbyImage
+          style={{
+            width: "280px",
+            height: "560px",
+            objectFit: "contain",
+            top: "-100px",
+          }}
           fluid={heroMockup.fluid}
-          className='absolute -bottom-9'
+          className="absolute -bottom-9"
         />
-        </div>
+      </div>
     </HeroSectionWrapper>
   )
 }

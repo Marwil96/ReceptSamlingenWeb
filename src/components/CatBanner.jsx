@@ -6,10 +6,10 @@ import GatsbyImage from 'gatsby-image';
 
 const CatBanner = ({image_1, image_2}) => {
   return (
-    <div className="flex justify-center pb-7 pt-7 bg-yellowish overflow-hidden relative">
-      <Container className="w-full grid grid-cols-12 gap-8">
+    <div className="flex justify-center pb-6 pt-6 lg:pb-7 lg:pt-7 bg-yellowish overflow-hidden relative">
+      <Container className="w-full grid grid-cols-6 lg:grid-cols-12 lg:gap-8">
         <div className="col-span-6">
-          <h2 className="text-2xl mb-1">Skapa recept direkt från mobilen</h2>
+          <h2 className=" text-xl lg:text-2xl mb-1">Skapa recept direkt från mobilen</h2>
           <span className='text-lg mb-6 block'>Ladda hem appen för att skapa  nya recept, organisera recepten och dela dem med vänner och bekanta.</span>
           <span className='text-lg mb-2 block font-semibold'>Ladda ner appen</span>
           <div className='flex flex-row'>
@@ -17,7 +17,7 @@ const CatBanner = ({image_1, image_2}) => {
             <GooglePlayBadge />
           </div>
         </div>
-        <div className='col-span-6 w-full relative'>
+        <div className='col-span-6 w-full relative hidden lg:flex'>
           <GatsbyImage style={{width:'23rem', position:'absolute', top:'-17rem'}} fluid={image_1.fluid} />
           <GatsbyImage style={{width:'23rem', position:'absolute', right: 0, bottom:'-17rem'}} fluid={image_2.fluid} />
         </div>

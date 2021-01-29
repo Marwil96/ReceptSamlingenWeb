@@ -16,7 +16,7 @@ html {
 
   font-family:'Manrope', 'sans-serif';
   color: #18191F;
-
+  scroll-behavior: smooth;
 }
 
 button {

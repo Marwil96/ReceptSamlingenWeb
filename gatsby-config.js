@@ -21,6 +21,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
