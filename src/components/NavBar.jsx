@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import { AppleStoreButton, GoogleStoreButton, SvgLogo } from '../AppStoreBadges';
+import Logo from "../assets/logo.svg"
+import AppStoreBade from "../assets/AppStoreBadge.svg"
+import GooglePlayBadge from "../assets/GooglePlayBadge.svg"
 import Hamburger from '../assets/Hamburger.svg'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styled from 'styled-components';
@@ -49,10 +51,9 @@ const NavBar = () => {
       >
         <div className="flex flex-row items-center">
           <a onClick={() => scrollTo("#home")}>
-            <SvgLogo
+            <Logo
               className="mr-4 cursor-pointer"
-              width="105px"
-              height="28px"
+              style={{width: '105px', height:"28px"}}
             />
           </a>
           <LinkItem closeMenu={() => setMenuActive(false)} href="#features">Funktioner</LinkItem>
@@ -62,13 +63,16 @@ const NavBar = () => {
         </div>
 
         <div className="flex flex-row">
-          <AppleStoreButton width="145px" height="40px" />
-          <GoogleStoreButton width="145px" height="40px" />
+          <AppleStoreButton style={{width: '145px', height:"40px"}} />
+          <GoogleStoreButton style={{width: '145px', height:"40px"}} />
         </div>
       </div>
 
       <div className="flex w-full flex-row pt-4 pb-4 justify-between items-center pl-3 pr-3 lg:hidden">
-        <SvgLogo width="105px" height="28px" className="z-50" />
+        <Logo
+              className="z-50"
+              style={{width: '105px', height:"28px"}}
+            />
         <HamburgerWrapper
           menuActive={menuActive}
           onClick={() => setMenuActive(!menuActive)}
