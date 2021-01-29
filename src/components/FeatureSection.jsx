@@ -14,7 +14,7 @@ const FeatureData = [
   {
     title: "Allt i samma app",
     text:
-      "Hämta hem dina favorit recept från all olika stora svenska recepthemsidor.",
+      "Hämta hem dina favorit recept från olika stora svenska recept hemsidor.",
     icon: <Sameapp />,
   },
   {
@@ -33,9 +33,8 @@ const FeatureData = [
     icon: <Comment />,
   },
   {
-    title: "Better components",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.",
+    title: "Veckoplanering",
+    text: "Planera veckans middagar tillsammans med din partner eller roomie.",
     icon: <Road />,
   },
   {
