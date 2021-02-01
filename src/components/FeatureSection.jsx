@@ -24,7 +24,7 @@ const FeatureData = [
   },
   {
     title: "Enkel att använda",
-    text: "Det är lätt att använda namn vare sig du är gammal eller ung.",
+    text: "Det är lätt att använda Matie vare sig du är gammal eller ung.",
     icon: <Easytouse />,
   },
   {
@@ -39,7 +39,7 @@ const FeatureData = [
   },
   {
     title: "Grym Organisering",
-    text: "Det finns inget lättare sätt att organisera dina recept än namn.",
+    text: "Det finns inget lättare sätt att organisera dina recept än Matie.",
     icon: <Organization />,
   },
 ]

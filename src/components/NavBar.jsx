@@ -18,6 +18,7 @@ const HamburgerWrapper = styled.div`
   padding-bottom: 1rem;
   svg {
     path {
+      transition: fill ease 450ms;
       ${props => (props.menuActive ? "stroke: #fff" : "stroke:#000")}
     }
   }
@@ -27,6 +28,15 @@ const MobileMenu = styled.div`
   height: calc(100%);
   overflow: hidden;
   bottom: 0;
+`
+
+const MobileHeader = styled.div`
+  svg {
+    path {
+      transition: fill ease 450ms;
+      ${props => (props.menuActive ? "fill: #fff" : "fill: #000")}
+    }
+  }
 `
 
 const NavBar = () => {
@@ -68,11 +78,11 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className="flex w-full flex-row pt-4 pb-4 justify-between items-center pl-3 pr-3 lg:hidden">
+      <MobileHeader menuActive={menuActive} className="flex w-full flex-row pt-4 pb-4 justify-between items-center pl-3 pr-3 lg:hidden">
         <Logo
-              className="z-50"
-              style={{height:"28px"}}
-            />
+          className="z-50"
+          style={{height:"28px"}}
+        />
         <HamburgerWrapper
           menuActive={menuActive}
           onClick={() => setMenuActive(!menuActive)}
@@ -86,7 +96,7 @@ const NavBar = () => {
             style={{ stroke: "green" }}
           />
         </HamburgerWrapper>
-      </div>
+      </MobileHeader>
 
       <MobileMenu
         className={`fixed p-4 pb-6 top-0 w-full bg-black flex flex-col justify-end h-screen transition ease-in-out duration-500 ${
