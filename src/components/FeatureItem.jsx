@@ -1,5 +1,4 @@
 import React from 'react';
-import Road from '../assets/road.svg';
 
 const FeatureItem = ({title, text, icon, children}) => {
   return (

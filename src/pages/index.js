@@ -1,9 +1,6 @@
 import React from "react"
 import '../styles/base.css';
-import { graphql, Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import HeroSection from "../components/HeroSection";
 import NavBar from "../components/NavBar";

@@ -1,5 +1,5 @@
 import GatsbyImage from 'gatsby-image';
-import React from 'React';
+import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 import Container from './Container';

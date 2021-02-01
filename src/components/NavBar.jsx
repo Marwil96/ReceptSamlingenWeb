@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Logo from "../assets/logo.svg"
 import AppStoreBadge from "../assets/AppStoreBadge.svg"
 import GooglePlayBadge from "../assets/GooglePlayBadge.svg"
