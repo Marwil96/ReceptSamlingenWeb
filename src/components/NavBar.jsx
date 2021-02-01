@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Logo from "../assets/logo.svg"
-import AppStoreBade from "../assets/AppStoreBadge.svg"
+import AppStoreBadge from "../assets/AppStoreBadge.svg"
 import GooglePlayBadge from "../assets/GooglePlayBadge.svg"
 import Hamburger from '../assets/Hamburger.svg'
 import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -33,7 +33,7 @@ const NavBar = () => {
   const [pastHero, setPastHero ] = useState(false)
   const [menuActive, setMenuActive] = useState(false)
   
-  if(window !== undefined){
+  if(typeof window !== 'undefined'){
     window.addEventListener("scroll", () => {
       window.pageYOffset > 88 ? setPastHero(true) : setPastHero(false) 
     })
@@ -53,7 +53,7 @@ const NavBar = () => {
           <a onClick={() => scrollTo("#home")}>
             <Logo
               className="mr-4 cursor-pointer"
-              style={{width: '105px', height:"28px"}}
+              style={{height:"28px"}}
             />
           </a>
           <LinkItem closeMenu={() => setMenuActive(false)} href="#features">Funktioner</LinkItem>
@@ -63,15 +63,15 @@ const NavBar = () => {
         </div>
 
         <div className="flex flex-row">
-          <AppleStoreButton style={{width: '145px', height:"40px"}} />
-          <GoogleStoreButton style={{width: '145px', height:"40px"}} />
+          <AppStoreBadge style={{width: '145px', height:"40px"}} />
+          <GooglePlayBadge style={{width: '145px', height:"40px"}} />
         </div>
       </div>
 
       <div className="flex w-full flex-row pt-4 pb-4 justify-between items-center pl-3 pr-3 lg:hidden">
         <Logo
               className="z-50"
-              style={{width: '105px', height:"28px"}}
+              style={{height:"28px"}}
             />
         <HamburgerWrapper
           menuActive={menuActive}
@@ -98,6 +98,10 @@ const NavBar = () => {
         <LinkItem closeMenu={() => setMenuActive(false)} className="text-white text-1xl font-normal" href="#create-recipe">Recept</LinkItem>
         <LinkItem closeMenu={() => setMenuActive(false)} className="text-white text-1xl font-normal" href="#social">Socialt</LinkItem>
         <LinkItem closeMenu={() => setMenuActive(false)} className="text-white text-1xl font-normal" href="#contact">Kontakta oss</LinkItem>
+        <div className="flex flex-row mt-6">
+          <AppStoreBadge style={{width: '145px', height:"40px"}} />
+          <GooglePlayBadge style={{width: '145px', height:"40px"}} />
+        </div>
       </MobileMenu>
     </header>
   )
