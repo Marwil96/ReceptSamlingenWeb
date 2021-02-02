@@ -12,11 +12,16 @@ import Footer from "../components/Footer";
 
 const IndexPage = ({ data }) => (
   <div>
-    <SEO title="Home" />
+    <SEO  />
     <NavBar />
     <HeroSection heroMockup={data.hero_mockup} />
     <FeatureSection />
-    <InfoSection image={data.create_recipe_mockup} />
+    <InfoSection
+      image={data.create_recipe_mockup}
+      title="Så här lätt skapar man ett recept."
+      link='/create-recipe'
+      text="Vi på Matie vill att det ska vara så lätt som möjligt att lägga till ett favoritrecept så vi har två sätt att göra det på. Antingen skapar man det på traditionellt sätt där man lägger in all information själv eller så använder man sig av våran recept-nerladdnings funktion där du enkelt kan använda ett recept från internet som bas i ditt nya recept."
+    />
     <InfoBanner image={data.social_image} />
     <CatBanner image_1={data.CommentsMock} image_2={data.HomepageMock} />
     <Footer />

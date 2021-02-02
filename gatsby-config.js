@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Matie - Din egna delbara receptbok.`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Med Matie kan du enkelt skapa kokböcker som du kan dela med dina vänner och bekanta. Dessutom är det lätt att följa dina vänners mat äventyr samt kommentera och ge tips.`,
     author: `@gatsbyjs`,
   },
   plugins: [

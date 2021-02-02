@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Logo from "../assets/logo.svg"
 import AppStoreBadge from "../assets/AppStoreBadge.svg"
 import GooglePlayBadge from "../assets/GooglePlayBadge.svg"
 import Hamburger from '../assets/Hamburger.svg'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const LinkItem = ({ className, href, children, closeMenu }) => (
-  <a onClick={() => {scrollTo(href); closeMenu()}}>
+  <Link to={`${href}`} onClick={() => {!href.includes('/') && scrollTo(href); closeMenu()}}>
     <h5 className={`${className} mr-5 cursor-pointer`}>{children}</h5>
-  </a>
+  </Link>
 )
 const HamburgerWrapper = styled.div`
   z-index: 100;
@@ -42,6 +43,9 @@ const MobileHeader = styled.div`
 const NavBar = () => {
   const [pastHero, setPastHero ] = useState(false)
   const [menuActive, setMenuActive] = useState(false)
+  const [pathName, setPathName] = useState('/')
+  
+  useEffect(() => {typeof window !== 'undefined' && window.scrollTo(0, 0); setPathName(window.location.pathname)}, [])
   
   if(typeof window !== 'undefined'){
     window.addEventListener("scroll", () => {
@@ -60,29 +64,35 @@ const NavBar = () => {
         style={{ maxWidth: "128rem", width: "100%" }}
       >
         <div className="flex flex-row items-center">
-          <a onClick={() => scrollTo("#home")}>
-            <Logo
-              className="mr-4 cursor-pointer"
-              style={{height:"28px"}}
-            />
-          </a>
-          <LinkItem closeMenu={() => setMenuActive(false)} href="#features">Funktioner</LinkItem>
-          <LinkItem closeMenu={() => setMenuActive(false)} href="#create-recipe">Hur man skapar ett recept</LinkItem>
-          <LinkItem closeMenu={() => setMenuActive(false)} href="#social">Socialt</LinkItem>
-          <LinkItem closeMenu={() => setMenuActive(false)} href="#contact">Kontakta oss</LinkItem>
+          <Link to="/#home"  onClick={() => {scrollTo('#home')}}>
+            <Logo className="mr-4 cursor-pointer" style={{ height: "28px" }} />
+          </Link>
+          
+          {pathName === '/' && <LinkItem closeMenu={() => setMenuActive(false)} href="#features">
+            Funktioner
+          </LinkItem>
+          }
+          <LinkItem closeMenu={() => setMenuActive(false)} href="/create-recipe">
+            Hur man skapar ett recept
+          </LinkItem>
+          <LinkItem closeMenu={() => setMenuActive(false)} href="#contact">
+            Kontakta oss
+          </LinkItem>
         </div>
 
         <div className="flex flex-row">
-          <AppStoreBadge style={{width: '145px', height:"40px"}} />
-          <GooglePlayBadge style={{width: '145px', height:"40px"}} />
+          <AppStoreBadge style={{ width: "145px", height: "40px" }} />
+          <GooglePlayBadge style={{ width: "145px", height: "40px" }} />
         </div>
       </div>
 
-      <MobileHeader menuActive={menuActive} className="flex w-full flex-row pt-4 pb-4 justify-between items-center pl-3 pr-3 lg:hidden">
-        <Logo
-          className="z-50"
-          style={{height:"28px"}}
-        />
+      <MobileHeader
+        menuActive={menuActive}
+        className="flex w-full flex-row pt-4 pb-4 justify-between items-center pl-3 pr-3 lg:hidden"
+      >
+        <Link to="/#home">
+          <Logo className="z-50" style={{ height: "28px" }} />
+        </Link>
         <HamburgerWrapper
           menuActive={menuActive}
           onClick={() => setMenuActive(!menuActive)}
@@ -103,14 +113,39 @@ const NavBar = () => {
           menuActive ? "transform translate-x-0" : " transform translate-x-full"
         } lg:hidden`}
       >
-        <LinkItem closeMenu={() => setMenuActive(false)} className="text-white text-1xl font-normal" href="#home">Hem</LinkItem>
-        <LinkItem closeMenu={() => setMenuActive(false)} className="text-white text-1xl font-normal" href="#features">Funktioner</LinkItem>
-        <LinkItem closeMenu={() => setMenuActive(false)} className="text-white text-1xl font-normal" href="#create-recipe">Recept</LinkItem>
-        <LinkItem closeMenu={() => setMenuActive(false)} className="text-white text-1xl font-normal" href="#social">Socialt</LinkItem>
-        <LinkItem closeMenu={() => setMenuActive(false)} className="text-white text-1xl font-normal" href="#contact">Kontakta oss</LinkItem>
+        <LinkItem
+          closeMenu={() => setMenuActive(false)}
+          className="text-white text-1xl font-normal"
+          href="/#home"
+        >
+          Hem
+        </LinkItem>
+        {pathName === '/' && 
+          <LinkItem
+            closeMenu={() => setMenuActive(false)}
+            className="text-white text-1xl font-normal"
+            href="#features"
+          >
+            Funktioner
+          </LinkItem>
+        }
+        <LinkItem
+          closeMenu={() => setMenuActive(false)}
+          className="text-white text-1xl font-normal"
+          href="create-recipe"
+        >
+          Recept
+        </LinkItem>
+        <LinkItem
+          closeMenu={() => setMenuActive(false)}
+          className="text-white text-1xl font-normal"
+          href="#contact"
+        >
+          Kontakta oss
+        </LinkItem>
         <div className="flex flex-row mt-6">
-          <AppStoreBadge style={{width: '145px', height:"40px"}} />
-          <GooglePlayBadge style={{width: '145px', height:"40px"}} />
+          <AppStoreBadge style={{ width: "145px", height: "40px" }} />
+          <GooglePlayBadge style={{ width: "145px", height: "40px" }} />
         </div>
       </MobileMenu>
     </header>

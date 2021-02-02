@@ -3,10 +3,10 @@ import AppStoreBadge from "../assets/AppStoreBadge.svg"
 import GooglePlayBadge from "../assets/GooglePlayBadge.svg"
 import Container from './Container'
 import LogoIcon from '../assets/logo_icon.svg'
-import scrollTo from 'gatsby-plugin-smoothscroll'
+import { Link } from 'gatsby'
 
 const LinkItem = ({children, href, className}) => (
-  <span onClick={() => {scrollTo(href)}} className={`${className} text-base text-white mr-4 cursor-pointer`}>{children}</span>
+  <Link to={href} className={`${className} text-base text-white mr-4 cursor-pointer`}>{children}</Link>
 )
 
 const Footer = () => {
@@ -19,14 +19,13 @@ const Footer = () => {
         <div className="flex flex-col col-span-6 mb-5 lg:mb-0">
           <LogoIcon className="mb-4" />
           <div className="mb-2">
-            <LinkItem>Download Now</LinkItem>
-            <LinkItem>Licence</LinkItem>
+            <LinkItem>Ladda ner APK</LinkItem>
+            <LinkItem>Licens</LinkItem>
           </div>
           <div className="mb-2 flex flex-wrap">
-            <LinkItem href="#home">Hem</LinkItem>
-            <LinkItem href="#features">Funktioner</LinkItem>
-            <LinkItem href="#create-recipe">Hur man skapar ett recept</LinkItem>
-            <LinkItem href="#social">Socialt</LinkItem>
+            <LinkItem href="/">Hem</LinkItem>
+            <LinkItem href="/#features">Funktioner</LinkItem>
+            <LinkItem href="/create-recipe">Hur man skapar ett recept</LinkItem>
           </div>
           <div className="mb-2 flex flex-wrap">
             <a href="mailto:info@ohhi.se">
