@@ -32,15 +32,17 @@ const HeroSectionWrapper = styled.section`
 
 const HeroSection = ({heroMockup}) => {
   return (
-    <HeroSectionWrapper id='home'>
+    <HeroSectionWrapper id="home">
       <Container className="flex flex-col z-10 items-center pt-8 xs:pt-9 pb-11 2xl:pt-11 pl-3 pr-3 lg:pl-7 lg:pr-7 xl:pl-0 xl:pr-0">
         <div className="flex flex-col items-center mt-2 2xl:mt-8">
           <h1 className="mb-4 lg:text-center text-xl lg:text-2xl max-w-6xl xl:text-3xl xl:max-w-screen-lg 2xl:text-4xl 2xl:max-w-none">
             Hämta, skapa och dela dina recept direkt från din mobil.
           </h1>
-          <Button className="pl-4 pr-4 pt-2 pb-2 lg:pl-5 lg:pr-5 lg:pt-3 lg:pb-3 w-full lg:w-auto">
-            Ladda hem app
-          </Button>
+          <a href="https://testflight.apple.com/join/gJP0qjVr" className='w-full lg:w-auto' target="__blank">
+            <Button className="pl-4 pr-4 pt-2 pb-2 lg:pl-5 lg:pr-5 lg:pt-3 lg:pb-3 w-full lg:w-auto">
+              Ladda hem app
+            </Button>
+          </a>
         </div>
       </Container>
       <div className="circle -bottom-22 xs:-bottom-21">

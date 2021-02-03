@@ -19,8 +19,13 @@ const Footer = () => {
         <div className="flex flex-col col-span-6 mb-5 lg:mb-0">
           <LogoIcon className="mb-4" />
           <div className="mb-2">
-            <LinkItem>Ladda ner APK</LinkItem>
-            <LinkItem>Licens</LinkItem>
+            <a
+              href="https://drive.google.com/file/d/1AG5oyymM9hHMHB8HswJyX0SHqehGTEOh/view?usp=sharing"
+              target="__blank"
+            >
+              <LinkItem>Ladda ner Android APK</LinkItem>
+            </a>
+            {/* <LinkItem>Licens</LinkItem> */}
           </div>
           <div className="mb-2 flex flex-wrap">
             <LinkItem href="/">Hem</LinkItem>
@@ -35,8 +40,15 @@ const Footer = () => {
         </div>
         <div className="flex flex-col lg:items-end col-span-6">
           <span className="text-base text-white mb-3">Ladda ner appen</span>
-          <AppStoreBadge className="mb-3" />
-          <GooglePlayBadge />
+          <a href="https://testflight.apple.com/join/gJP0qjVr" target="__blank">
+            <AppStoreBadge className="mb-3" />
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1AG5oyymM9hHMHB8HswJyX0SHqehGTEOh/view?usp=sharing"
+            target="__blank"
+          >
+            <GooglePlayBadge />
+          </a>
         </div>
       </Container>
     </footer>

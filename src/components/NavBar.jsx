@@ -64,15 +64,24 @@ const NavBar = () => {
         style={{ maxWidth: "128rem", width: "100%" }}
       >
         <div className="flex flex-row items-center">
-          <Link to="/#home"  onClick={() => {scrollTo('#home')}}>
+          <Link
+            to="/#home"
+            onClick={() => {
+              scrollTo("#home")
+            }}
+          >
             <Logo className="mr-4 cursor-pointer" style={{ height: "28px" }} />
           </Link>
-          
-          {pathName === '/' && <LinkItem closeMenu={() => setMenuActive(false)} href="#features">
-            Funktioner
-          </LinkItem>
-          }
-          <LinkItem closeMenu={() => setMenuActive(false)} href="/create-recipe">
+
+          {pathName === "/" && (
+            <LinkItem closeMenu={() => setMenuActive(false)} href="#features">
+              Funktioner
+            </LinkItem>
+          )}
+          <LinkItem
+            closeMenu={() => setMenuActive(false)}
+            href="/create-recipe"
+          >
             Hur man skapar ett recept
           </LinkItem>
           <LinkItem closeMenu={() => setMenuActive(false)} href="#contact">
@@ -81,8 +90,15 @@ const NavBar = () => {
         </div>
 
         <div className="flex flex-row">
-          <AppStoreBadge style={{ width: "145px", height: "40px" }} />
-          <GooglePlayBadge style={{ width: "145px", height: "40px" }} />
+          <a href="https://testflight.apple.com/join/gJP0qjVr" target="__blank">
+            <AppStoreBadge style={{ width: "145px", height: "40px" }} />
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1AG5oyymM9hHMHB8HswJyX0SHqehGTEOh/view?usp=sharing"
+            target="__blank"
+          >
+            <GooglePlayBadge style={{ width: "145px", height: "40px" }} />
+          </a>
         </div>
       </div>
 
@@ -120,7 +136,7 @@ const NavBar = () => {
         >
           Hem
         </LinkItem>
-        {pathName === '/' && 
+        {pathName === "/" && (
           <LinkItem
             closeMenu={() => setMenuActive(false)}
             className="text-white text-1xl font-normal"
@@ -128,7 +144,7 @@ const NavBar = () => {
           >
             Funktioner
           </LinkItem>
-        }
+        )}
         <LinkItem
           closeMenu={() => setMenuActive(false)}
           className="text-white text-1xl font-normal"

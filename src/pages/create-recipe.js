@@ -56,7 +56,7 @@ const CreateRecipe = ({data}) => {
   ]
   return (
     <div id="home">
-      <SEO title='Hur recept skapas' />
+      <SEO title="Hur recept skapas" />
       <NavBar />
       <div className="flex justify-center overflow-hidden relative w-full">
         <Container className="w-full flex flex-col z-10 items-center pt-8 xs:pt-9 pb-11 2xl:pt-11 pl-3 pr-3 lg:pl-7 lg:pr-7 xl:pl-0 xl:pr-0">
@@ -64,9 +64,14 @@ const CreateRecipe = ({data}) => {
             <h1 className="mb-4 lg:text-left text-xl lg:text-2xl max-w-6xl xl:text-3xl xl:max-w-screen-lg 2xl:text-4xl 2xl:max-w-none">
               Så här lätt är det att skapa ett recept med Matie.
             </h1>
-            <Button className="pl-4 pr-4 pt-2 pb-2 lg:pl-5 lg:pr-5 lg:pt-3 lg:pb-3 w-full lg:w-auto">
-              Ladda hem app
-            </Button>
+            <a
+              href="https://testflight.apple.com/join/gJP0qjVr"
+              target="__blank"
+            >
+              <Button className="pl-4 pr-4 pt-2 pb-2 lg:pl-5 lg:pr-5 lg:pt-3 lg:pb-3 w-full lg:w-auto">
+                Ladda hem app
+              </Button>
+            </a>
           </div>
         </Container>
         <div className="w-16 h-16 -right-14 -bottom-13 lg:w-23 lg:h-23 rounded-full bg-yellowish absolute lg:-right-17 lg:-bottom-17"></div>
