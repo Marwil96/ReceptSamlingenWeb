@@ -23,7 +23,7 @@ const Footer = () => {
               href="https://drive.google.com/file/d/1AG5oyymM9hHMHB8HswJyX0SHqehGTEOh/view?usp=sharing"
               target="__blank"
             >
-              <LinkItem>Ladda ner Android APK</LinkItem>
+              <span className="text-base text-white mr-4 cursor-pointer">Ladda ner Android APK</span>
             </a>
             {/* <LinkItem>Licens</LinkItem> */}
           </div>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
           <div className="mb-2 flex flex-wrap">
             <a href="mailto:info@ohhi.se">
-              <LinkItem className="underline">info@ohhi.se</LinkItem>
+              <span className="underline text-base text-white mr-4 cursor-pointer">info@ohhi.se</span>
             </a>
           </div>
         </div>

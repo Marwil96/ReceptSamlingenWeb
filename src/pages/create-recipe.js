@@ -77,7 +77,7 @@ const CreateRecipe = ({data}) => {
         <div className="w-16 h-16 -right-14 -bottom-13 lg:w-23 lg:h-23 rounded-full bg-yellowish absolute lg:-right-17 lg:-bottom-17"></div>
       </div>
       {infoBlocks.map((props, index) => (
-        <InfoSection {...props} reverse={isOdd(index)} />
+        <InfoSection {...props} key={index} reverse={isOdd(index)} />
       ))}
       <CatBanner image_1={data.CommentsMock} image_2={data.HomepageMock} />
       <Footer />
@@ -90,7 +90,7 @@ export const query = graphql`
     CommentsMock: imageSharp(
       fixed: { originalName: { eq: "CommentsMock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -109,7 +109,7 @@ export const query = graphql`
     HomepageMock: imageSharp(
       fixed: { originalName: { eq: "HomepageMock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -128,7 +128,7 @@ export const query = graphql`
     create_recipe_mockup: imageSharp(
       fixed: { originalName: { eq: "CreateRecipe.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -147,7 +147,7 @@ export const query = graphql`
     chief_notes_mock: imageSharp(
       fixed: { originalName: { eq: "chief_notes_mock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -166,7 +166,7 @@ export const query = graphql`
     choose_name: imageSharp(
       fixed: { originalName: { eq: "choose_name.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -185,7 +185,7 @@ export const query = graphql`
     choose_collection_mock: imageSharp(
       fixed: { originalName: { eq: "choose_collection_mock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -204,7 +204,7 @@ export const query = graphql`
     ingredient_mock: imageSharp(
       fixed: { originalName: { eq: "ingredient_mock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -223,7 +223,7 @@ export const query = graphql`
     recipesteps_mock: imageSharp(
       fixed: { originalName: { eq: "recipesteps_mock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -242,7 +242,7 @@ export const query = graphql`
     time_recipe_mock: imageSharp(
       fixed: { originalName: { eq: "time_recipe_mock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp

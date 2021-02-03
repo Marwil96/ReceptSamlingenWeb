@@ -34,7 +34,7 @@ export const query = graphql`
     hero_mockup: imageSharp(
       fixed: { originalName: { eq: "HeroSectionMockup.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -53,7 +53,7 @@ export const query = graphql`
     create_recipe_mockup: imageSharp(
       fixed: { originalName: { eq: "CreateRecipe.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -70,9 +70,9 @@ export const query = graphql`
     }
 
     social_image: imageSharp(
-      fixed: { originalName: { eq: "social_image.png" } }
+      fixed: { originalName: { eq: "social_image.jpg" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -91,7 +91,7 @@ export const query = graphql`
     CommentsMock: imageSharp(
       fixed: { originalName: { eq: "CommentsMock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp
@@ -110,7 +110,7 @@ export const query = graphql`
     HomepageMock: imageSharp(
       fixed: { originalName: { eq: "HomepageMock.png" } }
     ) {
-      fluid {
+      fluid(maxWidth: 2048, quality: 90) {
         base64
         tracedSVG
         srcWebp

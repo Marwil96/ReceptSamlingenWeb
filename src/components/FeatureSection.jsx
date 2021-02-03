@@ -55,8 +55,8 @@ const FeatureSection = () => {
         </span>
         {/* Feature Items Container */}
         <div className="grid grid-cols-4 md:grid-cols-8 gap-3 lg:grid-cols-12 w-full lg:gap-5">
-          {FeatureData.map(props => (
-            <FeatureItem {...props}> {props.icon} </FeatureItem>
+          {FeatureData.map((props, index) => (
+            <FeatureItem {...props} key={index}> {props.icon} </FeatureItem>
           ))}
         </div>
       </Container>
