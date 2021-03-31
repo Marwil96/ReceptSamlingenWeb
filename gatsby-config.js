@@ -14,6 +14,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-simple-analytics",
+      options: {
+        trackPageViews: true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
