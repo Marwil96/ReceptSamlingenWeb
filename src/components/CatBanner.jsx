@@ -21,13 +21,13 @@ const CatBanner = ({image_1, image_2}) => {
           </span>
           <div className="flex flex-row">
             <a
-              href="https://testflight.apple.com/join/gJP0qjVr"
+              href="https://apps.apple.com/se/app/matie-recept-och-matlagning/id1540745967"
               target="__blank"
             >
               <AppStoreBade className="mr-2" />
             </a>
             <a
-              href="https://drive.google.com/file/d/1AG5oyymM9hHMHB8HswJyX0SHqehGTEOh/view?usp=sharing"
+              href="https://play.google.com/store/apps/details?id=com.williammartinsson.receptsamlingen"
               target="__blank"
             >
               <GooglePlayBadge />

@@ -20,7 +20,7 @@ const Footer = () => {
           <LogoIcon className="mb-4" />
           <div className="mb-2">
             <a
-              href="https://drive.google.com/file/d/1AG5oyymM9hHMHB8HswJyX0SHqehGTEOh/view?usp=sharing"
+              href="https://play.google.com/store/apps/details?id=com.williammartinsson.receptsamlingen"
               target="__blank"
             >
               <span className="text-base text-white mr-4 cursor-pointer">Ladda ner Android APK</span>
@@ -40,11 +40,11 @@ const Footer = () => {
         </div>
         <div className="flex flex-col lg:items-end col-span-6">
           <span className="text-base text-white mb-3">Ladda ner appen</span>
-          <a href="https://testflight.apple.com/join/gJP0qjVr" target="__blank">
+          <a href="https://apps.apple.com/se/app/matie-recept-och-matlagning/id1540745967" target="__blank">
             <AppStoreBadge className="mb-3" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1AG5oyymM9hHMHB8HswJyX0SHqehGTEOh/view?usp=sharing"
+            href="https://play.google.com/store/apps/details?id=com.williammartinsson.receptsamlingen"
             target="__blank"
           >
             <GooglePlayBadge />

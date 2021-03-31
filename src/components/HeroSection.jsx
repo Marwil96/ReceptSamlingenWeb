@@ -38,7 +38,7 @@ const HeroSection = ({heroMockup}) => {
           <h1 className="mb-4 lg:text-center text-xl lg:text-2xl max-w-6xl xl:text-3xl xl:max-w-screen-lg 2xl:text-4xl 2xl:max-w-none">
             Hämta, skapa och dela dina recept direkt från din mobil.
           </h1>
-          <a href="https://testflight.apple.com/join/gJP0qjVr" className='w-full lg:w-auto' target="__blank">
+          <a href="https://apps.apple.com/se/app/matie-recept-och-matlagning/id1540745967" className='w-full lg:w-auto' target="__blank">
             <Button className="pl-4 pr-4 pt-2 pb-2 lg:pl-5 lg:pr-5 lg:pt-3 lg:pb-3 w-full lg:w-auto">
               Ladda hem app
             </Button>

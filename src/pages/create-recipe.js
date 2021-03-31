@@ -65,7 +65,7 @@ const CreateRecipe = ({data}) => {
               Så här lätt är det att skapa ett recept med Matie.
             </h1>
             <a
-              href="https://testflight.apple.com/join/gJP0qjVr"
+              href="https://apps.apple.com/se/app/matie-recept-och-matlagning/id1540745967"
               target="__blank"
             >
               <Button className="pl-4 pr-4 pt-2 pb-2 lg:pl-5 lg:pr-5 lg:pt-3 lg:pb-3 w-full lg:w-auto">
